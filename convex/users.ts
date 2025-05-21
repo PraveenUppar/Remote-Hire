@@ -2,7 +2,7 @@ import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 
 // User model functions performed in the database
-// Functions - Synuser and getUsers and
+// Functions - Synuser and getUsers and getUserByClerkId
 
 // Function to create a new user and checking if the user already exists in the database
 export const syncUser = mutation({
