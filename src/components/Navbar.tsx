@@ -4,6 +4,8 @@ import { CodeIcon } from "lucide-react";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import DasboardBtn from "./DasboardBtn";
 
+// Navbar component
+
 function Navbar() {
   return (
     <nav className="border-b">
@@ -15,7 +17,7 @@ function Navbar() {
         >
           <CodeIcon className="size-8 text-emerald-500" />
           <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
-            CodeSync
+            Remote_Hire
           </span>
         </Link>
 

@@ -2,18 +2,17 @@ Interview Coding Platform
 
 Tech Stack 
 
-- React.JS
-- Next.JS
-- Clerk
-- Convex DB
-- Stream
-- Lucid React
-- Tailwind CSS 
+- React.JS - Frontend
+- Next.JS - Backend
+- Clerk - Auth
+- Convex DB - Database
+- Stream - Video Streaming
+- Lucid React - Icons
+- Tailwind CSS - Styling
 - Typescript
-- Date-fns
-- Radix UI
-- Shadcn UI
-- Monaco Editor
+- Date-fns - 
+- Shadcn UI - Components
+- Monaco Editor - 
 - svix - Webhook as a Service
 
 
