@@ -16,7 +16,7 @@ const http = httpRouter();
 http.route({
   path: "/clerk-webhook",
   method: "POST",
-  // 
+  // Http handler that handles the webhook request
   handler: httpAction(async (ctx, request) => {
     // Get the webhook secret from the environment variable
     const webhookSecret = process.env.CLERK_WEBHOOK_SECRET;
@@ -67,10 +67,12 @@ http.route({
       // Define the user object for the user created event
       const { id, email_addresses, first_name, last_name, image_url } = evt.data;
 
+    
       const email = email_addresses[0].email_address;
       const name = `${first_name || ""} ${last_name || ""}`.trim();
 
       // Check if the user already exists in convex if not create the user
+      // Call the syncUser function from the user.ts to create the user in convex
       try {
         await ctx.runMutation(api.users.syncUser, {
           clerkId: id,
