@@ -1,0 +1,49 @@
+Interview Coding Platform
+
+Tech Stack 
+
+- React.JS
+- Next.JS
+- Clerk
+- Convex DB
+- Stream
+- Lucid React
+- Tailwind CSS 
+- Typescript
+- Date-fns
+- Radix UI
+- Shadcn UI
+- Monaco Editor
+
+
+Issuer - https://fast-hound-50.clerk.accounts.dev
+JWKS Endpoint - https://fast-hound-50.clerk.accounts.dev/.well-known/jwks.json
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
