@@ -1,11 +1,8 @@
 import { QuickActionType } from "@/constants";
 import { Card } from "./ui/card";
 
-// some weird tw bug, but this is how it works
-// from-orange-500/10 via-orange-500/5 to-transparent
-// from-blue-500/10 via-blue-500/5 to-transparent
-// from-purple-500/10 via-purple-500/5 to-transparent
-// from-primary/10 via-primary/5 to-transparent
+// Function that renders the action card taking the deatils from the QUICK_ACTIONS component from the constant folder
+{/* Quick Action --> Action Card --> (home)Page.ts */}
 
 function ActionCard({ action, onClick }: { action: QuickActionType; onClick: () => void }) {
   return (

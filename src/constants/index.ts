@@ -27,6 +27,10 @@ export const TIME_SLOTS = [
   "17:00",
 ];
 
+// Quick action for the iterviewer to create a new interview, join interview, schedule an interview and access recordings
+// It contain the details of the actions
+{/* Quick Action --> Action Card --> (home)Page.ts */}
+
 export const QUICK_ACTIONS = [
   {
     icon: Code2,
@@ -137,7 +141,8 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
       {
         input: "x = 121",
         output: "true",
-        explanation: "121 reads as 121 from left to right and from right to left.",
+        explanation:
+          "121 reads as 121 from left to right and from right to left.",
       },
       {
         input: "x = -121",

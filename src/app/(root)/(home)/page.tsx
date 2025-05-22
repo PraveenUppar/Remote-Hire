@@ -1,12 +1,16 @@
 "use client";
 
+// 
 import ActionCard from "@/components/ActionCard";
+// Import quick actions(for interviewer to create meetings etc) from constants
 import { QUICK_ACTIONS } from "@/constants";
+// Import user role from userRole hook
 import { useUserRole } from "@/hooks/useUserRole";
 import { useQuery } from "convex/react";
 import { useState } from "react";
 import { api } from "../../../../convex/_generated/api";
 import { useRouter } from "next/navigation";
+// 
 import MeetingModal from "@/components/MeetingModal";
 import LoaderUI from "@/components/LoaderUI";
 import { Loader2Icon } from "lucide-react";
@@ -14,12 +18,15 @@ import MeetingCard from "@/components/MeetingCard";
 
 export default function Home() {
   const router = useRouter();
-
+  // Check if the user is interviewer or candidate
   const { isInterviewer, isCandidate, isLoading } = useUserRole();
+  // Fetch the interviews of the interviewer from the convex API - getMyInterviews
   const interviews = useQuery(api.interviews.getMyInterviews);
   const [showModal, setShowModal] = useState(false);
+  // Set the modal type to start or join meeting
   const [modalType, setModalType] = useState<"start" | "join">();
 
+  //  Function to handle the handle the click events of the Quick action from the interviwer
   const handleQuickAction = (title: string) => {
     switch (title) {
       case "New Call":
@@ -50,10 +57,12 @@ export default function Home() {
             : "Access your upcoming interviews and preparations"}
         </p>
       </div>
-
+      {/* If the user is interviwer */}
       {isInterviewer ? (
         <>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Map through the quick actions and render them */}
+            {/* Quick Action --> Action Card --> (home)Page.ts */}
             {QUICK_ACTIONS.map((action) => (
               <ActionCard
                 key={action.title}
@@ -62,7 +71,7 @@ export default function Home() {
               />
             ))}
           </div>
-
+          {/*  */}
           <MeetingModal
             isOpen={showModal}
             onClose={() => setShowModal(false)}
@@ -71,6 +80,7 @@ export default function Home() {
           />
         </>
       ) : (
+        // If the user is candidate
         <>
           <div>
             <h1 className="text-3xl font-bold">Your Interviews</h1>
